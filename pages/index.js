@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   const handleSubmit = async () => {
-    console.log("submitted");
+    console.log("submitted successfully");
   };
   return (
     <div className={styles.container}>
