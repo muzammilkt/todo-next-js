@@ -1,13 +1,26 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { Input, Button } from "../../components/UI";
 import Link from "next/link";
 
-function register() {
+function Register() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [confirmPassword, setConfirmPassword] = useState();
+
+  const confirmPasswordValidation = function (password, confirmationPassword) {
+    if (password === confirmationPassword) {
+      return true;
+    }
+    return false;
+  };
+
+  //register new user
   const onRegister = async () => {
     console.log("register");
   };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -26,8 +39,8 @@ function register() {
                 type="text"
                 varient="small"
                 placeholder="email"
-                // value={""}
-                // onValueChange={""}
+                value={email}
+                onValueChange={setEmail}
               ></Input>
             </div>
             <div className="mt-2">
@@ -35,6 +48,7 @@ function register() {
                 type="password"
                 varient="small"
                 placeholder="password"
+                value={confirmPassword}
               ></Input>
             </div>
             <div className="mt-2">

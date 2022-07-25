@@ -18,8 +18,10 @@ export default function Home() {
       <form onSubmit={handleSubmit}>
         <div className="grid place-items-center h-screen">
           <div className="bg-red-300 p-6 border-4 border-gray-600 rounded-lg w-5/12">
-            <div className="grid place-items-center mb-2 text-fuchsia-800 subpixel-antialiased
-            italic">
+            <div
+              className="grid place-items-center mb-2 text-fuchsia-800 subpixel-antialiased
+            italic"
+            >
               Login to your account
             </div>
             <div>

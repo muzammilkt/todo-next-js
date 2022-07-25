@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
+const dotenv = require("dotenv");
 
-module.exports = nextConfig
+dotenv.config();
+
+module.exports = { nextConfig, env: { BASE_URL: process.env.BASE_URL } };
